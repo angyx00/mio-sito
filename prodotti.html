@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prodotto - Cover in bamboo</title>
+  <style>
+    .product {
+      max-width: 320px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .product .img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .product .img:hover {
+      transform: scale(1.05);
+    }
+
+    .product h2 {
+      font-size: 1.6rem;
+      color: #2c3e50;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #27ae60;
+      margin-bottom: 20px;
+    }
+
+    .product button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product button:hover {
+      background-color: #219150;
+    }
+
+    .product a {
+      display: inline-block;
+      margin: 12px 10px 0;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .product a:hover {
+      color: #1c5980;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="product" id="cover1">
+    <img src="cover.jpg" alt="Cover 1" class="img" onclick="window.open('descrizionearticoli.html', '_blank')" />
+    <h2>Cover in bamboo</h2>
+    <p>€9.99</p>
+    <button onclick="addToCart('Cover in bamboo', 9.99)">Aggiungi al carrello</button>
+    <br />
+    <a href="d0ublegreen.html">Torna allo shop</a>
+    <a href="carrello.html">Vai al carrello</a>
+  </section>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      const existingProductIndex = cart.findIndex(item => item.name === name);
+      if (existingProductIndex > -1) {
+        cart[existingProductIndex].quantity += 1;
+      } else {
+        cart.push({ name: name, price: price, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} aggiunto al carrello!`);
+    }
+  </script>
+
+</body>
+</html>
