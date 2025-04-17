@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .product-details {
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  
+
+
+
+  /* === Header === */
+  header {
+    background-color: white;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* === Navbar === */
+  .navbar {
+    background-color: green;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    display: block;
+  }
+
+  .nav-links a:hover {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+  }
+
+  /* === Sezioni === */
+  section {
+    padding: 40px 20px;
+  }
+
+  #chi-siamo {
+    background-color: #e0f7fa;
+  }
+
+  #prodotti {
+    background-color: #fff3e0;
+  }
+
+  #cart {
+    background-color: #f1f8e9;
+    border-top: 2px solid #4caf50;
+    padding: 20px;
+  }
+
+  /* === Prodotto === */
+  .product {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  /* === Pulsanti === */
+  button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #388e3c;
+  }
+
+.product .img{
+    width: 50%;
+    height: 50%;
+  }
+
+  .descrizione {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra orizzontalmente */
+    height: 100vh;           /* altezza viewport per centratura verticale */
+    margin: 0;               /* rimuove margini predefiniti */
+    text-align: center;      /* centra il testo */
+  }
+
+  /* Opzionale: margini tra gli elementi */
+  .descrizione > * {
+    margin:10px 0;
+}
+
+h1 {   
+  text-align: center;
+} 
